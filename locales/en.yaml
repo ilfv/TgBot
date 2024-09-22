@@ -1,0 +1,595 @@
+for_image:
+  main: MAIN
+  winrate: WINRATE
+  avg_damage: |-
+    AVERAGE
+    DAMAGE
+  battles: BATTLES
+  medals: MEDALS
+  mainGun: |-
+    HIGH
+    CALIBER
+  medalKolobanov: KOLOBANOV'S
+  warrior: TOP GUN
+  medalRadleyWalters: |-
+    RADLEY
+    WALTERS
+  markOfMastery: MASTER
+  rating: RATING
+  personal_rating: |-
+    PERSONAL
+    RATING
+  rating_battles: |-
+    BATTLES
+  no_rating: NO RATING
+  tank: "TANK"
+
+  leagues:
+    gold: GOLD
+    platinum: PLATINUM
+    brilliant: BRILLIANT
+    no_league: NO LEAGUE
+    calibration: CALIBRATION
+  total: TOTAL
+  frags_per_battle: |-
+    KILLS PER 
+    BATTLE
+  max_frags: |-
+    MOST KILLS
+  enemies_destroyed: |-
+    DESTROYED
+    ENEMIES
+  destruction_ratio: |-
+    DESTRUCTION
+    RATIO
+  damage_dealt: |-
+    DAMAGE
+    CAUSED
+  damage_ratio: |-
+    DAMAGE
+    RATIO
+  avg_spotted: |-
+    AVG
+    SPOTTED
+  survived_battles: |-
+    BATTLES
+    SURVIVED
+  xp: |-
+    TOTAL
+    EXP
+  max_xp: |-
+    MAX
+    EXP
+  shots: SHOTS
+  accuracy: |-
+    ACCURACY
+  no_clan: WITHOUT CLAN
+  no_data: NO DATA
+  survival_ratio: |-
+    SURVIVABILITY
+  dropped_capture_points: |-
+    DROPPED 
+    CAPTURE POINTS
+  capture_points: |-
+    CAPTURE
+    POINTS
+  damage_received: |-
+    DAMAGE
+    RECEIVED
+  leaderboard_position: |-
+    RANKING
+    POSITION
+  hits: HITS
+  frags: FRAGS
+  losses: DEFEATS
+  wins: VICTORIES
+
+map_names:
+  rockfield: Rockfield
+  desert_sands: Desert Sands
+  middleburg: Middleburg
+  copperfield: Copperfield
+  alpenstadt: Alpenstadt
+  mines: Mines
+  dead_rail: Dead Rail
+  fort_despair: Fort
+  himmelsdorf: Himmelsdorf
+  black_goldville: Black Goldville
+  oasis_palm: Basis Palm
+  ghost_factory: Ghost Factory
+  yukon: Yukon
+  molendijk: Molendijk
+  port_bay: Port
+  winter_malinovka: Winter Malinovka
+  castilia: Castilia
+  canal: Canal
+  vineyards: Vineyards
+  canyon: Canyon
+  mayan_ruins: Mayan Ruins
+  dynasty_pearl: Dynasty Pearl
+  naval_frontier: Naval Frontier
+  falls_creek: Falls Creek
+  new_bay: New Bay
+  normandy: Normandy
+  yamato_harbor: Yamato Harbor
+  wasteland: Wasteland
+  lagoon: Lagoon
+  unknown: Unknown
+
+gamemodes:
+  any: Unknown
+  regular: Regular
+  training_room: Training Room
+  tournament: Tournament
+  quick_tournament: Quick Tournament
+  rating: Rating
+  mad_games: Mad Games
+  realistic_battles: Realistic
+  urprising: Uprising
+  gravity_mode: Gravity Mode
+  skirmish: Skirmish
+  burning_games: Burning Games
+  unknown: Unknown
+
+frequent:
+  common:
+    'yes': 'Yes'
+    'no': 'No'
+    nickname: Nickname
+    region: Region
+    time_units:
+      d: 'd'
+      h: 'h'
+      m: 'm'
+      s: 's'
+  info:
+    unregistred_player: Save your data with `/set_player`, for use this command
+    is_channel: This command can be used only in private messages with bot
+    try_again: Try again
+    good_button_respoce: "👍"
+    premium_only: This command can be used only with premium status
+    info: Information
+    err_info_sent: Information about the error has been sent to the developer.
+    warning: Warning
+    discard_changes: You canceled the changes.
+    session_already_started: Session is already running, would you like to restart it?
+  errors:
+    error: Error
+    missing_argument: Missing required argument
+    too_many_arguments: Too many arguments
+    invalid_argument: Invalid argument
+    bad_button_responce: "🔴"
+    wrong_file_type: "Wrong file type"
+    cooldown: Wait <time> seconds before next use
+    unknown_error: Unknown error.
+    user_banned: You are blocked and cannot use this bot's commands.
+    api_error: Error when working with API.
+    parser_error: Error when parsing data
+
+cmds:
+  start:
+    descr: |- 
+              Hi ✋
+              see /help for available commands
+  help:
+    descr: |-
+      available commands: /help, /set_player, /lang, /settings, /stats, /session_widget, /session_state, /session, /start_session, /start_autosession, /get_session, /hook, /replay
+      /help: this message
+      /set_player: set information about player, just use command in private chat with bot, or use /set_player <nickname> <region> <slot_num>
+      /lang: set your language
+      /settings: settings menu
+      /stats: if you register with /set_player, you can use /stats to see your statistics, or use /stats <nickname> <region>
+      /session_widget: use command to get link to session widget
+      /session_state: display session state(if started)
+      /start_session: start session
+      /start_autosession: start auto session(auto restart session)
+      /get_session: get session (if started)
+      /hook: you can put a hook on a player, and after the trigger is triggered, bot will be sent statistics
+      /replay: parse replay file
+
+      There is also an inline mode, use button for example, write as per the example and then wait a second
+    
+  set_player:
+    descr: Set information about player
+    sub_descr:
+      get_nickname: Now write your nickname👇
+      get_region: Choose account region
+    info:
+      invalid_nickname: Incorrect nickname. Try again
+      choosed_region: "Choosed region: "
+      set_player_ok: 'Player information has been successfully saved, you can now use /stats, without any arguments, to automatically display statistics based on the saved data.'
+      choose_slot: "Choose slot: "
+
+  stats:
+    errors:
+      player_not_found: No player with this nickname/id has been found.
+      uncorrect_nickname: Incorrect player nickname. The nickname can consist of Latin letters A-Z, numbers 0-9 and the symbol '_'.
+      no_battles: Need more than 100 battles on account
+    
+  set_lang:
+    descr: Set your language
+    info:
+      set_lang_ok: Localisation language has been successfully changed.
+    sub_descr:
+      choose_lang: Choose text lang
+    
+  session_state:
+    errors:
+      session_not_found: Session not found
+    items:
+      started: |- 
+        ```py
+        Session started.
+        +----------------------------------+
+        Autosession:              <is_autosession>
+        +__________________________________+
+        Autosession restart time:
+        <update_time> | UTC + <timezone>
+        Restart in:               <restart_in>
+        +..................................+
+        Session time:             <time>
+        Battles played:           <battles>
+        Time remaining:           <time_left>
+        +----------------------------------+
+        ```
+      started_part2: |-
+        >>> Reset session: 
+        /start_session
+        >>> Reset autosession:
+        /start_autosession
+      not_started: Session is not started
+  
+  start_session:
+    info:
+      started: Session is running. Now you can play some battles and get session statistics using /get_session
+
+  start_autosession:
+    info:
+      started: Autosession is running. Now you can play some battles and get session statistics using /get_session
+    sub_descr:
+      get_timezone: Type timezone(num 0-12)
+      get_restart_time: Now type restart time in format `HH:MM`
+    errors:
+      uncorrect_tz: Uncorrect timezone. Try again
+      uncorrect_r_time: |-
+        Incorrect restart time.
+        Expected time format: "hh:mm"
+        Received: <time>
+        Examples of correct time:
+        00:20, 03:15, 22:40, 13:20
+        Try again.
+  
+  get_session:
+    errors:
+      session_not_found: No change in stats detected, maybe you haven't done any fights or the API hasn't updated the data, try again later.
+    
+  session:
+    descr: |-
+      Session state:
+      <state>
+    sub_descr:
+      ss_main_text: |-
+        Current session settings:
+        <settings>
+      success_started: Session started✔
+      success_stopped: Session stopped✔
+      buttons:
+        start_session: Start session
+        stop_session: Stop session
+        get_session: Get session stats
+        autosession: Autosession
+        timezone: Timezone
+        restart_time: Restart time
+        back: Back ↩
+  
+  image_settings:
+    descr:
+      this: Image settings
+      sub_descr:
+        use_custom_bg: Use custom background
+        colorize_stats: Colorize statistics
+        glass_effect: Glass effect 0 - Disable (0-30)
+        stats_blocks_transparency: Block background brightness (0-100)
+        nickname_color: 'Nickname color (HEX or RGB Color)'
+        clan_tag_color: 'Clan tag color (HEX or RGB Color)'
+        stats_color: 'Main statistics color (HEX or RGB Color)'
+        main_text_color: 'Main text color (HEX or RGB Color)'
+        stats_text_color: 'Statistics text color (HEX or RGB Color)'
+        disable_flag: 'Disable region flag rendering'
+        hide_nickname: 'Hide nickname, will be replaced with Player'
+        hide_clan_tag: 'Hide clan tag, will be removed'
+        disable_stats_blocks: 'Disable statistics blocks rendering'
+        disable_rating_stats: 'Disable rating statistics'
+        disable_cache_label: 'Disable cache label'
+    info:
+      set_ok: 'Image settings applied successfully, try `/stats`'
+    sub_descr:
+      set_bg: "👍\nSend me background, formats - png/jpeg"
+      main_text: |-
+        current image settings(picture update when you back to main menu) ⬆
+        select what you want to change ⬇
+      preview: "Preview(picture update when you back to main menu):"
+      choose_color2change: "Choose color to change:"
+      type_new_color: "Type new color (HEX or RGB):"
+      choose_param2change: "Choose parameter to change:"
+      glass_effect: "Type glass effect. 0 - Disable (0-30)"
+      reset_bg: "🔃 Reset background"
+      available_themes: "Available themes: "
+    items:
+      color_error_footer: 'Color code format(HEX): #rrggbb or #rgb. Example of valid color: #FF9900 - Orange. Color code format(RGB): r;g;b. Example of valid color: 255;165;0 - Orange.'
+      background:
+        oversize: The file is too large (maximum 2 MB)
+        small_resolution: The image has too low resolution (minimum 256x256)
+      main_buttons:
+        bg: "🖼️ Background"
+        theme: "🌟 Theme"
+        colors: "🎨 Colors"
+        other: "✨ Other"
+        reset: "🔄 Reset settings"
+        save: "💾 Save"
+        back: "↩️ Back"
+      colors_buttons:
+        nickname_color: "Nickname"
+        clan_tag_color: "Clan tag"
+        stats_color: "Main stats"
+        main_text_color: "Main text"
+        stats_text_color: "Statistics text"
+        negative_stats_color: "Negative stats"
+        positive_stats_color: "Postive stats"
+      others_buttons:
+        use_custom_bg: "Use custom background"
+        colorize_stats: "Colorize statistics"
+        disable_flag: "Disable flag"
+        hide_nickname: "Hide nickname"
+        hide_clan_tag: "Hide clan tag"
+        disable_stats_blocks: "Disable statistics blocks"
+        disable_rating_stats: "Disable rating statistics"
+        disable_cache_label: "Disable cache label"
+        glass_effect: "Glass effect"
+        blocks_bg_brightness: "Block background brightness"
+        on_: "On"
+        off_: "Off"
+    settings_represent_alias:
+      descr:
+        this: Get current image settings
+        sub_descr:
+          ''
+      errors:
+        ''
+      info:
+        get_ok: 'Current image settings:'
+      items:
+        theme: Theme
+        use_custom_bg: Custom background
+        colorize_stats: Colorize statistics
+        glass_effect: Glass effect
+        stats_blocks_transparency: Statistics blocks transparency
+        nickname_color: Nickname color
+        clan_tag_color: Clan tag color
+        stats_color: Main statistics color
+        main_text_color: Main text color
+        stats_text_color: Statistics text color
+        negative_stats_color: Negative statistics color
+        positive_stats_color: Positive statistics color
+        disable_flag: Hide region flag
+        hide_nickname: Hide nickname
+        hide_clan_tag: Hide clan tag
+        disable_stats_blocks: Hide statistics blocks
+        disable_rating_stats: Hide rating statistics
+        disable_cache_label: Hide cache icon
+
+        stats_blocks_disabled: Drawing of blocks with statistics is disabled
+  
+  stats_view_settings:
+    descr:
+      mtext: what slot do you want to change?
+      success: Stats view settings successfully applied
+    sub_descr:
+      main_button: "Stats view settings"
+      preview_text: "Preview"
+      save: "Save"
+  
+  session_widget:
+    descr:
+      this: Start session Web widget.
+    info:
+      success: |- 
+        Your session statistics widget has been launched\.
+        Link: 
+        `<link>`
+        Press to copy
+        CSS settings for correct display: 
+        ```css
+        body {{ background-color: rgba(0,0,0,0)!important; overflow: hidden }}
+        ```
+
+    settings:
+      descr: |-
+        ```py
+        <settings>
+        ```
+        Currently widget settings ↑
+      info:
+        success: Session widget settings have been applied.
+      edit:
+        descr: What do you want to change?
+        io_change: Enter a new value for the `<param>`, based on the constraints(x - entered value) - <limits>
+        io_success: "Successfully set `<param>` to <value>"
+        success_onoff: "Successfully set"
+        bool_change: "Choose value for <param> ↓"
+      buttons:
+        _on: 'On'
+        _off: 'Off'
+        edit: "🛠 Edit"
+        reset: "🔄 Reset settings"
+        save: "💾 Save"
+        back: "↩️ Back"
+        edit_buttons:
+          max_stats_blocks: "Max stats blocks"
+          max_stats_small_blocks: "Max stats small blocks"
+          background_transparency: "Background transparency"
+          adaptive_width: "Adaptive width [TEST MODE]"
+          stats_block_color: "Stats block color"
+          disable_main_stats_block: "Disable main stats block"
+          use_bg_for_stats_blocks: "Use background for stats blocks"
+          disable_nickname: "Disable nickname"
+          disable_bg: "Disable background"
+          update_time: "Update per seconds"
+            
+  settings:
+    descr: Settings
+    sub_descr:
+      main_text: What do you want to change?🛠
+      buttons:
+        profile: Profile 👤
+        image: Image 🖼️
+        session_widget: Session widget 📊
+        profile_reg: New account
+      validators:
+        session_widget:
+          stats_block_color: x - color in hex or rgb format
+      profile_text: |-
+        Current account is <nickname>(<region>)
+        Switch account ⬇
+      profile_switch_success: |-
+        Successfully switched account to <nickname>(<region>)
+
+  hook:
+    info:
+      active_descr: You has already active hook
+      choose_target_stats: Choose target statistics
+      activated: Succes start new hook🥳
+      hook_ended: "[Hook ended](tg://user?id=<user_id>)"
+      disabled: "Hook successfully has been disabled"
+    sub_descr:
+      type_nickname: Type target nickname
+      choose_trigger: "Choose stats trigger(pattern for better understanding: {{old stats}} {{trigger}} {{new stats}})"
+      type_value: Type target value
+      choose_target_region: Choose target region
+      watch_for: "Watch for"
+      hook_state: |-
+        Hook started for <nickname>\(<region>\)
+        ```py
+        Mode: <stats_type>
+        Trigger: <trigger>
+        Trigger value: <target_value>
+        Starting value: <starting_value>
+        Current value: <current_value>
+        Watch for: <watch_for>
+        Ends in: <time_left>
+        ```
+    buttons:
+      new_hook: Start new hook
+      hook_state: Hook state
+      disable_hook: Disable hook
+      main: Main stats
+      session: Session stats
+      diff: Difference stats
+
+  parse_replay:
+    info:
+      send_file: Now send replay
+      choose_region: Choose region where was battle
+    items:
+      avg_stats: Average
+      empty_player: '[no data]'
+      title: |-
+        Replay data from `<member_name>`
+        Account: `<nickname>`
+      common:
+        win: Win
+        lose: Lose
+        draw: Draw
+      formenu: |-
+        ```py
+        Tank:     | <tank_name>
+        Pure exp  | <xp>
+
+        efficiency
+        --------------------------------
+        Damage dealt....... | <damage>
+        Assistance damage.. | <spotted>
+        Tanks destroyed.... | <frags>
+        Damage blocked..... | <blocked>
+        Shots made......... | <shots>
+        Shots hit.......... | <shots_hit>
+        Penetrations....... | <shots_penetrated>
+        Accuracy........... | <accuracy>
+        Penetration rate... | <penetration_ratio>
+        ```
+      description: |-
+        ```py
+        Main battle info:
+        +---------------------------+
+        Outcome:       <battle_result>
+        Battle type:   <battle_type>
+        Tier:          <tier>
+        Map:           <map>
+        Battle played: 
+        <time>
+        +---------------------------+
+
+        Damage:
+        +---------------------------+
+        Dealt:         <damage_dealt>
+        Assisted:      <damage_assisted>
+        Blocked:       <damage_blocked>
+        +---------------------------+
+
+        Capture points:
+        +---------------------------+
+        Earned:        <point_captured>
+        Seized:        <point_defended>
+        +---------------------------+
+
+        Shots:
+        +---------------------------+
+        Fired:         <shots_fired>
+        Hits:          <shots_hit>
+        Penetrations:  <shots_penetrated>
+        +---------------------------+
+
+        Efficiency:
+        +---------------------------+
+        Accuracy:      <accuracy>
+        Penetrations:  <penetration>
+
+        Allies:
+        +---------------------------+
+        Nick:              WR:  Btls:
+        ==================+====+=====
+        <allies>
+        Enemies:
+        +---------------------------+
+        Nick:              WR:  Btls:
+        ==================+====+=====
+        <enemies>
+        ```
+      buttons:
+        main_back: ↩Cancel
+        back: "↩back"
+    errors:
+      parsing_error: Parsing error
+
+# profile
+  profile:
+    descr:
+      this: User profile
+    items:
+      profile: Profile
+      level: 'Level:'
+      exp: 'experience:'
+      last_commands: 'Last commands'
+      last_activity: 'Last activity:'
+      commands_counter: 'commands used:'
+      accounts_info: 'Accounts information'
+      badges: Profile badges
+      command_name: 'command name'
+      last_used_time: 'min. ago.'
+      num: 'number'
+      account: 'account'
+      session: 'session'
+      others: Others
+      premium: 'premium:'
+      premium_time: 'expires in:'
+    

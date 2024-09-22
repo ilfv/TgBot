@@ -1,0 +1,100 @@
+server:
+  host: 'blitzhub.eu'
+  port: '443'
+  protocol: 'https'
+
+bot_name:
+  'Blitz Statistics'
+  
+session:
+  ttl: 3_888_000 # in seconds - 45 days
+
+autosession:
+  ttl: 3_888_000 # in seconds - 45 days
+
+account:
+  inactive_ttl: 15_552_000 # in seconds (180 days)
+
+default:
+  prefix : '!'  # deprecated | unused
+  lang: 'en'
+  available_locales: ['ru', 'en', 'pl', 'ua', 'auto']
+  available_regions: ['ru', 'eu', 'na', 'asia']
+  locale_aliases: {ru: 'ru', en: 'en', pl: 'pl', uk: 'ua', en-GB: 'en', en-US: 'en'}
+
+image:
+  default_bg_path: 'res/image/default_image/default_bg.png'
+  available_stats: [
+    winrate, avg_damage, battles,
+    accuracy, hits, frags,
+    wins, losses, capture_points,
+    damage_dealt, damage_received, shots,
+    xp, survived_battles, dropped_capture_points,
+    damage_ratio, destruction_ratio, frags_per_battle,
+    avg_spotted, survival_ratio, empty
+    ]
+  available_rating_stats: [
+    winrate, avg_damage, battles,
+    accuracy, hits, frags,
+    wins, losses, capture_points,
+    damage_dealt, damage_received, shots,
+    xp, survived_battles, dropped_capture_points,
+    damage_ratio, destruction_ratio, frags_per_battle,
+    avg_spotted, survival_ratio, rating, leaderboard_position, empty
+    ]
+
+themes:
+  available: ['default', 'tiger_girl', 'alpine', 'ggame']
+
+game_api:
+  reg_urls:
+    ru:   'papi.tanksblitz.ru'
+    eu:   'api.wotblitz.eu'
+    na:   'api.wotblitz.com'
+    asia: 'api.wotblitz.asia'
+
+  urls:
+    get_id: >
+      https://<reg_url>/wotb/account/list/
+      ?application_id=<app_id>
+      &search=<nickname>
+      &type=<search_type>
+      
+    search: >
+      https://<reg_url>/wotb/account/list/
+      ?application_id=<app_id>
+      &search=<nickname>
+      &type=<search_type>
+      &limit=<limit>
+
+    get_stats:
+      "https://<reg_url>/wotb/account/info/\
+      ?application_id=<app_id>\
+      &account_id=<player_id>\
+      &extra=statistics.rating\
+      &fields=-statistics.clan"
+
+    get_achievements:
+      "https://<reg_url>/wotb/account/achievements/\
+      ?application_id=<app_id>\
+      &fields=-max_series\
+      &account_id=<player_id>"
+
+    get_clan_stats:
+      "https://<reg_url>/wotb/clans/accountinfo/\
+      ?application_id=<app_id>\
+      &account_id=<player_id>\
+      &extra=clan"
+
+    get_tank_stats:
+      "https://<reg_url>/wotb/tanks/stats/\
+      ?application_id=<app_id>\
+      &account_id=<player_id>"
+
+init_photos_id: 6075297688
+dump_export_to_id: 6075297688
+allowed_updates: ['message', 'callback_query', 'inline_query']
+developers_id: [6075297688, 1211515374]
+
+session_widget:
+  url: '{server.protocol}://{server.host}:{server.port}/bot/session_widget_app?player_id=<user_id>&lang=<lang>&client=tg'
